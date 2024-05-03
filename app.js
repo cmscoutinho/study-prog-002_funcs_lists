@@ -1,4 +1,5 @@
 let listaNumerosSorteados = [];
+let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -34,7 +35,12 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-  let numeroEscolhido = parseInt(Math.random() * 5 + 1);
+  let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+  let quantidadeElementosNaLista = listaNumerosSorteados.length;
+  if (quantidadeElementosNaLista == numeroLimite) {
+    listaNumerosSorteados = [];
+  }
+
   if (listaNumerosSorteados.includes(numeroEscolhido)) {
     return gerarNumeroAleatorio();
   } else {
