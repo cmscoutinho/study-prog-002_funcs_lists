@@ -6,12 +6,11 @@ function imc(altura, peso) {
 // Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.
 function fatorial(numero) {
   let produto = 1;
-  let contador = numero;
-  while (contador > 0) {
-    produto *= contador;
-    contador--;
+  while (numero > 0) {
+    produto *= numero;
+    numero--;
   }
-  alert(`Fatorial de ${numero}: ${produto}.`);
+  return produto;
 }
 
 // Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais. Para isso, considere a cotação do dólar igual a R$4,80.
